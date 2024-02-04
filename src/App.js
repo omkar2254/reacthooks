@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './App.css';
-import UseState from './Components/UseState/UseState';
-
+import UseState from './Components/UseState';
+import UseEffect from './Components/UseEffect'
+import UseContext from './Components/UseContext'
+import UseRef from './Components/UseRef'
+import UseMemo from './Components/UseMemo'
 function App() {
 
   // const [name, setName] = useState('')
@@ -26,7 +29,11 @@ function App() {
       <p>You clicked {count} times</p>
       <button onClick = {()=> setCount(count + 1)}>Click Me</button>
     </div>
-    <UseState/>
+    {/* <UseState/>
+    <UseEffect/>
+    <UseContext/> */}
+    <UseRef/>
+    <UseMemo/>
     </>
   );
 }
