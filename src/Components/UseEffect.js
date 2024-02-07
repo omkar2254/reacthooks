@@ -8,13 +8,15 @@ const UseEffect = ()=>{
    let decrement = ()=>{
     setCounter(counter - 1);
    }
-   useEffect(()=>{
-    console.log("Omkar Patil")
-   })
+   useEffect(() => {
+    // This will run every time the component renders
+    document.getElementById('counterParagraph').innerHTML = `Counter: ${counter}`;
+  })
     return(
         <>
         <button onClick={increment}>Increment {counter}</button>
         <button onClick={decrement}>Decrement {counter}</button>
+        <p id="counterParagraph"></p>
         </>
     );
 };
